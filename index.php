@@ -1,4 +1,93 @@
+<?php
 
+
+if(isset($_POST['submit_btn'])) {
+    $email = $_POST['email'];
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];
+    $company = $_POST['company'];
+    $manager = $_POST['manager'];
+    $budget = $_POST['budget'];
+    $message = $_POST['message'];
+
+
+    if(empty($email)){
+        echo "<script>alert('Email Is Requird!');</script>";
+    }
+    elseif(empty($name)){
+        echo "<script>alert('Name Is Requird!');</script>";
+    }
+    elseif(empty($phone)){
+        echo "<script>alert('Phone Is Requird!');</script>";
+    }
+    elseif(empty($manager)){
+        echo "<script>alert('Manager Name Is Requird!');</script>";
+    }
+    elseif(empty($budget)){
+        echo "<script>alert('Budget Is Requird!');</script>";
+    }
+    elseif(empty($message)){
+        echo "<script>alert('Message Is Requird!');</script>";
+    }
+    else {
+
+        $to = "mdfarhantanvirtalha@gmail.com";
+        $subject = "HTML email";
+
+        $message = "
+        <html>
+            <head>
+                <title>Form portfolio</title>
+            </head>
+        <body>
+        <p>This email contains HTML Tags!</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>phone</th>
+                    <th>Company</th>
+                    <th>Manager</th>
+                    <th>Budget</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>".$name."</th>
+                    <th>".$email."</th>
+                    <th>".$phone."</th>
+                    <th>".$company."</th>
+                    <th>".$manager."</th>
+                    <th>".$budget."</th>
+                    <th>".$message."</th>
+                </tr>
+            </tbody>
+        </table>
+        </body>
+        </html>
+        ";
+
+        // Always set content-type when sending HTML email
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+        $mailSend = mail($to,$subject,$message,$headers);
+
+        if($mailSend == true){            
+            header("location:send_mail.php");
+        }
+        else{
+            echo "<script>alert('Mail send failed!');</script>";
+        }
+        
+    }
+}
+
+
+
+?>
 <!DOCTYPE html>
 
 <html lang="en">
