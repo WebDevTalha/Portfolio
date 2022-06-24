@@ -1,0 +1,34 @@
+/*----------------------------------------------
+*
+* [Theme Indigo Stylesheet]
+*
+* Template Name: Talha Dev
+* Version  : 1.0.0
+* Author   : Talha
+* Author URL: https://webdevtalha
+* Description: Build Your Next level Website
+* Tags: portfolio
+* 
+----------------------------------------------*/
+
+/*----------------------------------------------
+
+[ALL CONTENTS]
+
+1. Root
+
+----------------------------------------------*/
+
+/*----------------------------------------------
+1. Root
+----------------------------------------------*/
+
+/* #region Root */
+
+:root {
+    
+    --primary-color: #5900ff;
+    --secondary-color: #8340ff;
+}
+
+/* #endregion Root */
