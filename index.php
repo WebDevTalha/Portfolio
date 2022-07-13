@@ -714,7 +714,26 @@ if(isset($_POST['submit_btn'])) {
                     <div class="menu modal-body">
                         <div class="row w-100">
                             <div class="items p-0 col-12 text-center">
-                                <!-- Append [navbar] -->
+                                <ul class="navbar-nav items">
+                                    <li class="nav-item dropdown">
+                                        <a href="#home-section" class="nav-link prevent">Home</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a href="#about-section" class="nav-link prevent">About Me</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a href="#features-section" class="nav-link prevent">features</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a href="#skills-section" class="nav-link prevent">Skills</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a href="#hire-me" class="nav-link prevent">Hire Me</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a href="#contact" class="nav-link prevent">Contact</a>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="contacts p-0 col-12 text-center">
                                 <!-- Append [navbar] -->
